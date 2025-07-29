@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode con Interruptor</title>
+    <style>
+      :root {
+        --bg-light: #ffffff;
+        --text-light: #000000;
+        --bg-dark: #121212;
+        --text-dark: #f1f1f1;
+        --accent: #4ade80;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 2rem;
+        transition: background 0.3s, color 0.3s;
+        background: var(--bg-light);
+        color: var(--text-light);
+      }
+
+      /* Ocultar el checkbox */
+      #darkToggle {
+        display: none;
+      }
+
+      /* Estilo del interruptor */
+      .switch {
+        width: 60px;
+        height: 30px;
+        background: #ccc;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+
+      .switch::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 24px;
+        height: 24px;
+        background: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+
+      /* Estado activo (modo oscuro) */
+      #darkToggle:checked + label .switch {
+        background: var(--accent);
+      }
+
+      #darkToggle:checked + label .switch::before {
+        transform: translateX(30px);
+      }
+
+      /* Estilo del contenido */
+      .content {
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background: var(--bg-light);
+        color: var(--text-light);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      #darkToggle:checked + label + .content {
+        background: var(--bg-dark);
+        color: var(--text-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Orden importante: input + label + .content -->
+    <input type="checkbox" id="darkToggle" />
+    <label for="darkToggle">
+      <div class="switch"></div>
+    </label>
+
+    <div class="content">
+      <h1>🌙 Dark Mode solo con CSS</h1>
+      <p>
+        Este ejemplo muestra cómo alternar entre modo claro y oscuro sin usar
+        JavaScript, usando solo un interruptor hecho con HTML y CSS.
+      </p>
+    </div>
+  </body>
+</html>
