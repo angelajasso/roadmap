@@ -68,13 +68,34 @@ nav li:active {
 }
 /* main */
 /* hero */
+
 .hero {
-  width: 50%;
+  display: flex;
+  --l: 95%;
 }
 
-h1,
+.hero_title {
+  width: 50%;
+  margin: 1rem;
+  text-align: center;
+  align-content: center;
+}
+
+h1 {
+  --t: 17%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 h2 {
   --t: 17%;
+}
+
+.hero img {
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  border-radius: 50%;
 }
 
 /* gallery*/
