@@ -141,6 +141,10 @@ h2 {
   container-name: hero-container; /* Le damos un nombre */
 }
 
+.roadmap a {
+  text-decoration: none;
+}
+
 .step {
   --l: 75%;
   border-radius: 12px;
