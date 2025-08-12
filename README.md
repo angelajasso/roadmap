@@ -7,33 +7,30 @@ Este repositorio documenta mi progreso como desarrolladora web. Al finalizar cad
 ## 📚 Temas y Proyectos
 
 ### 🧱 HTML
-📌 Proyecto: [Landing Page Simple][En construcción]  
+📌 Proyecto: [Landing Page Simple](https://angelajasso.github.io/roadmap/HTML/landing_page/index.html) 
 🔧 Tecnologías: HTML5  
-🎯 Descripción: Maquetación semántica, estructura básica, favicon, imágenes optimizadas  
-📸 Captura: _pendiente_  
-📅 Fecha: _pendiente_ 
+🎯 Descripción: Maquetación semántica y estructura básica.  
+📅 Fecha: 11/07/2025
 
 ---
 
 ### 🎨 CSS
-📌 Proyecto: [Galería Animada][En construcción] 
-🔧 Tecnologías: HTML5, CSS3 (Flexbox, Grid, Transiciones)  
-🎯 Descripción: Diseño responsive, efectos hover, layout adaptable  
-📸 Captura: _pendiente_  
-📅 Fecha: _pendiente_
+📌 Proyecto: [Galería Animada](https://angelajasso.github.io/roadmap/CSS/animation_gallery/index.html) 
+🔧 Tecnologías: HTML5, CSS3 (Flexbox, Grid, @container)  
+🎯 Descripción: Diseño responsive, efectos hover y layout adaptable.  
+📅 Fecha: 11/08/2025
 
 ---
 
 ### ⚙️ JavaScript
 📌 Proyecto: [App de Tareas][En construcción] 
 🔧 Tecnologías: JavaScript Vanilla, DOM, LocalStorage  
-🎯 Descripción: CRUD, persistencia de datos, validaciones  
-📸 Captura: _pendiente_  
+🎯 Descripción: CRUD, persistencia de datos, validaciones   
 📅 Fecha: _pendiente_
 
 ---
 
-## ✍️ Notas de Aprendizaje
+<!-- ## ✍️ Notas de Aprendizaje
 
 En la carpeta [`/notas`](./notas/) encontrarás apuntes personales, conceptos clave y recursos útiles que recopilé mientras avanzaba en cada tema:
 
@@ -41,16 +38,16 @@ En la carpeta [`/notas`](./notas/) encontrarás apuntes personales, conceptos cl
 - [`css.md`](./notas/css.md)
 - [`js.md`](./notas/js.md)
 
----
+--- -->
 
-## 🚧 Próximamente
+<!-- ## 🚧 Próximamente
 
 - Migración del portafolio a Astro
 - Proyecto con consumo de APIs
 - Proyecto con deploy y CI/CD básico
 - Blog con markdown + SSG
 
----
+--- -->
 
 ## 🌐 Sígueme la pista
 
