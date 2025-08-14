@@ -1,0 +1,75 @@
+<article>
+  <header>
+    <h1>📦 Container Query en CSS: El Futuro del Diseño Responsivo</h1>
+    <p><em>Publicado el 12 de agosto de 2025 • Por Angela Maldonado</em></p>
+  </header>
+
+  <section>
+    <h2>¿Qué es un Container Query?</h2>
+    <p>
+      Un <strong>Container Query</strong> es una nueva funcionalidad en CSS que
+      permite aplicar estilos en función del tamaño de un <em>contenedor</em> y
+      no del tamaño de la ventana (<em>viewport</em>). Esto nos da un control
+      mucho más preciso al diseñar componentes que deben adaptarse a distintos
+      contextos.
+    </p>
+  </section>
+
+  <section>
+    <h2>¿Por qué es tan importante?</h2>
+    <p>
+      Hasta ahora, el diseño responsivo dependía de <code>@media queries</code>,
+      que trabajan sobre el ancho total de la pantalla. Sin embargo, esto no
+      siempre es ideal, ya que un mismo componente puede verse en contenedores
+      de diferentes tamaños dentro de la misma página. Con
+      <code>@container</code>, cada módulo es capaz de adaptarse de forma
+      independiente.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ejemplo básico</h2>
+    <pre>
+<code>.card {
+  container-type: inline-size;
+  container-name: card-container;
+}
+
+@container card-container (min-width: 500px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+}</code>
+    </pre>
+    <p>
+      En este ejemplo, la tarjeta cambia su disposición a
+      <code>flex-row</code> solo cuando su <strong>contenedor</strong> tiene un
+      ancho mayor a 500px, sin importar el tamaño total de la pantalla.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ventajas clave</h2>
+    <ul>
+      <li>Mejor modularidad en componentes.</li>
+      <li>Estilos más predecibles y reutilizables.</li>
+      <li>Menos dependencias en el tamaño del viewport.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      💡 <strong>Reflexión:</strong> Los <code>@container</code> no reemplazan a
+      los <code>@media queries</code>, pero sí complementan y mejoran nuestra
+      forma de hacer diseño responsivo.
+    </p>
+    <p>
+      📣
+      <em
+        >¿Ya has usado Container Query en tus proyectos? Cuéntamelo en los
+        comentarios.</em
+      >
+    </p>
+  </footer>
+</article>
