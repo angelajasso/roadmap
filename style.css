@@ -130,6 +130,42 @@ h2 {
   border-radius: 50%;
 }
 
+/* olas*/
+.waves {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 120px;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.wave use {
+  transform: translateZ(0);
+} /* evita blur en algunos browsers */
+
+/* Animación continua */
+@keyframes moveX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1200px);
+  }
+}
+
+.wave-front use {
+  animation: moveX 12s linear infinite;
+}
+.wave-back use {
+  animation: moveX 24s linear infinite;
+}
+
 /* roadmap */
 .roadmap {
   --t: 17%;
@@ -160,8 +196,48 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.step a:hover,
+.step a:active {
+  --l: 50%;
+}
+
 ul {
   padding: 0 2rem;
+}
+
+/* aside */
+aside {
+  --l: 75%;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.photo_container {
+  text-align: center;
+  align-content: center;
+}
+
+.photo {
+  width: 12rem;
+  height: 15rem;
+  margin: 1rem;
+  border-radius: 10%;
+}
+
+.info {
+  text-align: center;
+  align-content: center;
+}
+
+.aside_social {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  justify-self: center;
+}
+
+.btn {
+  margin: 0 1rem;
 }
 
 /* footer */
