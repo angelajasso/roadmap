@@ -267,7 +267,7 @@ footer {
   --l: 25%;
   --t: 95%;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
