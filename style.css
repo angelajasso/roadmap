@@ -169,11 +169,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.step a:hover,
-.step a:active {
-  --l: 50%;
-}
-
 .tema {
   display: flex;
   margin-top: 0;
@@ -239,6 +234,12 @@ ul {
   margin: 0 1rem;
   --l: 50%;
   border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.btn:hover,
+.btn:active {
+  --l: 95%;
 }
 
 /* Cuando el contenedor mida mínimo 800px */

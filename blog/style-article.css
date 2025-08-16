@@ -1,0 +1,29 @@
+/* General styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+* {
+  --primary-color: hsl(233, 37%, var(--l));
+  --color-text: hsl(233, 37%, var(--t));
+
+  background-color: var(--primary-color);
+  color: var(--color-text);
+}
+
+body {
+  --l: 95%;
+  --t: 17%;
+}
+
+article {
+  margin: 5rem;
+  --l: 75%;
+  border-radius: 20px;
+  padding: 2rem;
+}
