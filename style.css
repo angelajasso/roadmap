@@ -80,8 +80,8 @@ nav li:active {
 .section-hero {
   container-type: inline-size; /* Habilita medición */
   container-name: hero-container; /* Le damos un nombre */
-  padding: 1rem;
   max-width: 1400px; /* Importante: tener un ancho límite */
+  padding: 1rem;
   margin: 0 auto;
 }
 
@@ -130,42 +130,6 @@ h2 {
   border-radius: 50%;
 }
 
-/* olas*/
-.waves {
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 120px;
-}
-
-.wave {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 200%;
-  height: 100%;
-}
-
-.wave use {
-  transform: translateZ(0);
-} /* evita blur en algunos browsers */
-
-/* Animación continua */
-@keyframes moveX {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1200px);
-  }
-}
-
-.wave-front use {
-  animation: moveX 12s linear infinite;
-}
-.wave-back use {
-  animation: moveX 24s linear infinite;
-}
-
 /* roadmap */
 .roadmap {
   --t: 17%;
@@ -205,13 +169,30 @@ ul {
   padding: 0 2rem;
 }
 
-/* aside */
-aside {
+.card-container {
   --l: 75%;
   border-radius: 12px;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin: 0 3rem 3rem 3rem;
+  container-type: inline-size; /* Habilita medición */
+  container-name: card-container; /* Le damos un nombre */
+  max-width: 1400px; /* Importante: tener un ancho límite */
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Container query */
+@container card-container (min-width: 500px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .photo_container {
   text-align: center;
   align-content: center;
