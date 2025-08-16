@@ -131,12 +131,21 @@ h2 {
 }
 
 /* roadmap */
+.roadmap-card {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  gap: 1rem;
+
+  /* Habilitar container query */
+  container-type: inline-size;
+  container-name: main-container;
+}
+
 .roadmap {
   --t: 17%;
   max-width: 1400px;
   margin: 2rem;
   padding: 1rem;
-  position: relative;
   container-type: inline-size; /* Habilita medición */
   container-name: hero-container; /* Le damos un nombre */
 }
@@ -165,6 +174,14 @@ h2 {
   --l: 50%;
 }
 
+.tema {
+  display: flex;
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
 ul {
   padding: 0 2rem;
 }
@@ -172,7 +189,7 @@ ul {
 .card-container {
   --l: 75%;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 2rem;
   margin: 0 3rem 3rem 3rem;
   container-type: inline-size; /* Habilita medición */
   container-name: card-container; /* Le damos un nombre */
@@ -183,6 +200,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /* Container query */
@@ -201,7 +219,7 @@ ul {
 .photo {
   width: 12rem;
   height: 15rem;
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 10%;
 }
 
@@ -219,6 +237,28 @@ ul {
 
 .btn {
   margin: 0 1rem;
+  --l: 50%;
+  border-radius: 5px;
+}
+
+/* Cuando el contenedor mida mínimo 800px */
+@container main-container (min-width: 800px) {
+  .roadmap-card {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .roadmap {
+    grid-column: span 3;
+    grid-row: 1;
+    margin: 0 3rem 0 0;
+  }
+
+  .card-container {
+    grid-column: 1; /* Primera columna */
+    grid-row: 1; /* Primera fila */
+    margin: 1rem 0 0 3rem;
+    height: min-content;
+  }
 }
 
 /* footer */
