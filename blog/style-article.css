@@ -121,6 +121,19 @@ article code {
   font-size: 0.95rem;
 }
 
+article ul {
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
 .tags {
   margin-top: 1.5rem;
 }
