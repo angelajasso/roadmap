@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style-article.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logotipo" id="home">
+        <img src="../assets/Logo.svg" alt="logo" />
+        <p>Angela Jasso</p>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Roadmap</a>
+          </li>
+          <li>
+            <a href="#article">Artículo</a>
+          </li>
+          <li>
+            <a href="#footer">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="header-article" id="article">
+        <h1>Internet</h1>
+        <p>Publicado el 18 de agosto de 2025 • Por @angelajasso</p>
+      </section>
+      <article>
+        <h2>🧠 ¿Qué pasa cada vez que abres una página web?</h2>
+        <p>
+          Cuando abres tu navegador y escribes una dirección como
+          <code>www.ejemplo.com</code>, sucede mucho más de lo que parece detrás
+          de pantalla. Entender este proceso es fundamental si estás empezando
+          en el mundo del <strong>desarrollo web</strong>. En este artículo te
+          explico paso a paso cómo funciona Internet desde cero, para que
+          construyas con bases sólidas tus proyectos. 🚀
+        </p>
+
+        <h2>🌐 ¿Qué es Internet?</h2>
+        <p>
+          Internet es una
+          <strong>red global de computadoras conectadas entre sí</strong> que se
+          comunican gracias a un conjunto de reglas llamadas
+          <strong>protocolos</strong>. Podemos imaginarlo como una enorme
+          telaraña de conexiones que permite que la información viaje de un
+          lugar a otro en segundos.
+        </p>
+
+        <h2>🔄 El viaje de un sitio web</h2>
+        <p>
+          Cuando escribes una URL como: <code>www.ejemplo.com</code> empieza un
+          <strong>viaje de datos</strong> que involucra diferentes actores y
+          tecnologías.
+        </p>
+
+        <h2>🖥️ El cliente: tu navegador</h2>
+        <p>
+          El primer protagonista es el <strong>cliente</strong>, que normalmente
+          es tu navegador (Chrome, Firefox, Safari, etc.).
+        </p>
+        <ul>
+          <li>
+            Su tarea es <strong>pedir información</strong> al servidor donde
+            está alojada la página.
+          </li>
+          <li>El servidor responde enviando los archivos necesarios.</li>
+        </ul>
+
+        <h2>🧭 El papel del DNS</h2>
+        <p>
+          Pero antes de que eso ocurra, necesitamos algo importante: saber
+          <strong>a qué servidor dirigirnos</strong>. Aquí entra el
+          <strong>DNS (Domain Name System)</strong>, que funciona como una
+          <strong>guía telefónica de Internet</strong>.
+        </p>
+        <ul>
+          <li>
+            Traduce nombres como <code>www.ejemplo.com</code> en una
+            <strong>dirección IP</strong> (por ejemplo:
+            <code>192.168.0.1</code>).
+          </li>
+          <li>
+            Con esa IP, el navegador sabe exactamente dónde buscar la página.
+          </li>
+        </ul>
+
+        <h2>📡 Protocolos HTTP y HTTPS</h2>
+        <p>
+          Una vez que el navegador encuentra el servidor, se comunica usando
+          <strong>protocolos</strong>:
+        </p>
+        <ul>
+          <li>
+            <strong>HTTP (HyperText Transfer Protocol)</strong> → protocolo para
+            transferir datos.
+          </li>
+          <li>
+            <strong>HTTPS</strong> → la versión segura que protege la
+            información con cifrado. Esto garantiza que lo que ves en tu
+            pantalla no ha sido alterado en el camino.
+          </li>
+        </ul>
+
+        <h2>🔐 Criptografía: la seguridad detrás</h2>
+        <p>
+          La <strong>criptografía</strong> hace posible que tu información (como
+          contraseñas o datos bancarios) viaje de forma segura en Internet.
+          Gracias a ella, los datos están cifrados y no pueden ser leídos por
+          terceros.
+        </p>
+
+        <h2>📥 ¿Cómo llega la web a ti?</h2>
+        <p>Finalmente, el <strong>servidor envía los archivos</strong>:</p>
+        <ul>
+          <li>HTML → estructura</li>
+          <li>CSS → estilos</li>
+          <li>JavaScript → interactividad</li>
+        </ul>
+        <p>
+          El navegador interpreta esos archivos y
+          <strong>construye la página que ves en pantalla</strong>.
+        </p>
+
+        <h2>🙌 Conclusión</h2>
+        <p>
+          La próxima vez que abras un sitio web, recuerda que detrás de un
+          simple click ocurre un <strong>viaje complejo de información</strong>.
+          Y si quieres aprender <strong>desarrollo web</strong> o dar el salto
+          hacia tecnologías como <strong>Blockchain</strong>, entender estos
+          fundamentos es esencial.
+        </p>
+
+        <div class="tags">
+          <span>#Internet</span>
+          <span>#Frontend</span>
+          <span>#WebDevelopment</span>
+        </div>
+      </article>
+    </main>
+    <footer id="footer">
+      <p>© 2025 | Blog de Programación por Angela Jasso.</p>
+      <section>
+        <a href="https://github.com/angelajasso/">
+          <img src="../assets/mdi_github75.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/angelajasso/"
+          ><img src="../assets/mdi_linkedin75.svg" alt="LinkedIn"
+        /></a>
+      </section>
+    </footer>
+  </body>
+</html>
