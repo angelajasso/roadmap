@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" sizes="32x32" href="../assets/Logo.svg" />
+    <title>HTML</title>
+    <link rel="stylesheet" href="./style-article.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logotipo" id="home">
+        <img src="../assets/Logo.svg" alt="logo" />
+        <p>Angela Jasso</p>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Roadmap</a>
+          </li>
+          <li>
+            <a href="#article">Artículo</a>
+          </li>
+          <li>
+            <a href="#footer">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="header-article" id="article">
+        <h1>🔤 ¿Qué es HTML y por qué usar etiquetas semánticas?</h1>
+        <p>La base de toda página web, explicada de forma sencilla.</p>
+        <p>Publicado el 19 de agosto de 2025 • Por @angelajasso</p>
+      </section>
+      <article>
+        <h2>🧱 ¿Qué es HTML?</h2>
+        <p>
+          HTML significa <strong>HyperText Markup Language</strong>. Es el
+          lenguaje que define la <b>estructura</b> de cualquier sitio web que
+          visitas en Internet.
+        </p>
+        <p>
+          Su objetivo principal es organizar el contenido: títulos, párrafos,
+          imágenes, enlaces, tablas o formularios.
+        </p>
+
+        <h2>💻 Ejemplo básico de HTML</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es mi primer sitio web en HTML.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <div class="cta">
+          <p>
+            <strong>💡 Tip:</strong> Aprende HTML como la base antes de saltar a
+            CSS o JavaScript. Te dará claridad sobre cómo funciona la web.
+          </p>
+        </div>
+
+        <h2>🧠 ¿Qué son las etiquetas semánticas?</h2>
+        <p>
+          Una etiqueta <b>semántica</b> no solo da forma, también
+          <b>describe el propósito</b> del contenido que encierra.
+        </p>
+        <ul>
+          <li>✅ Claridad para humanos</li>
+          <li>
+            ✅ Claridad para máquinas (Google, lectores de pantalla, etc.)
+          </li>
+        </ul>
+
+        <h2>🔑 Ejemplos de etiquetas semánticas</h2>
+        <ul>
+          <li>
+            <code>&lt;header&gt;</code> – encabezado de la página o sección
+          </li>
+          <li><code>&lt;nav&gt;</code> – navegación principal</li>
+          <li><code>&lt;main&gt;</code> – contenido principal</li>
+          <li><code>&lt;section&gt;</code> – agrupación temática</li>
+          <li>
+            <code>&lt;article&gt;</code> – contenido independiente (ejemplo: un
+            post)
+          </li>
+          <li><code>&lt;footer&gt;</code> – pie de página</li>
+        </ul>
+
+        <h2>📌 Antes vs Después</h2>
+        <p>Sin semántica:</p>
+        <pre><code>&lt;div class="top"&gt;
+  &lt;div class="menu"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <p>Con semántica:</p>
+        <pre><code>&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+
+        <div class="cta">
+          <h2>📈 ¿Por qué usarlas?</h2>
+          <ul>
+            <li>Mejora el <b>SEO</b></li>
+            <li>Mejora la <b>accesibilidad</b></li>
+            <li>Hace tu código más <b>legible y mantenible</b></li>
+          </ul>
+          <p>➡️ Usa etiquetas semánticas desde tu primer proyecto.</p>
+        </div>
+
+        <h2>🔗 Conclusión</h2>
+        <p>
+          HTML es la base de todo sitio web, y las etiquetas semánticas son el
+          siguiente nivel para escribir un código más claro, accesible y
+          profesional.
+        </p>
+
+        <div class="tags">
+          <span>#HTML</span>
+          <span>#Frontend</span>
+          <span>#DesarrolloWeb</span>
+          <span>#EtiquetasSemánticas</span>
+          <span>#AprendeAProgramar</span>
+        </div>
+      </article>
+    </main>
+    <footer id="footer">
+      <p>© 2025 | Blog de Programación por Angela Jasso.</p>
+      <section>
+        <a href="https://github.com/angelajasso/">
+          <img src="../assets/mdi_github75.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/angelajasso/"
+          ><img src="../assets/mdi_linkedin75.svg" alt="LinkedIn"
+        /></a>
+      </section>
+    </footer>
+  </body>
+</html>
