@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="./style-article.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logotipo" id="home">
+        <img src="../assets/Logo.svg" alt="logo" />
+        <p>Angela Jasso</p>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Roadmap</a>
+          </li>
+          <li>
+            <a href="#article">Artículo</a>
+          </li>
+          <li>
+            <a href="#footer">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="header-article" id="article">
+        <h1>🎨CSS: Da estilo a tus páginas web.</h1>
+        <p>Publicado el 22 de agosto de 2025 • Por @angelajasso</p>
+      </section>
+      <article>
+        <h2>Introducción</h2>
+        <p>
+          CSS (Cascading Style Sheets) es el lenguaje que usamos para dar estilo
+          y diseño a las páginas web. Si HTML es la estructura de una casa, CSS
+          es la pintura, los muebles y la decoración que la hacen única. CSS
+          controla cómo se ve un sitio web: colores, tamaños, márgenes, fuentes
+          y más. Permite separar el <strong>contenido (HTML)</strong> de la
+          <strong>presentación (CSS)</strong>, lo que facilita el mantenimiento
+          y mejora la accesibilidad.
+        </p>
+
+        <h2>Tipos de selectores</h2>
+        <p>
+          Los selectores nos permiten decirle al navegador qué elementos
+          queremos modificar.
+        </p>
+        <ul>
+          <li>Por etiqueta: p { color: red; }</li>
+          <li>Por clase: .boton { background: blue; }</li>
+          <li>Por id: #menu { font-size: 18px; }</li>
+          <li>Combinadores y avanzados: article p, div > span, :hover, etc.</li>
+        </ul>
+
+        <h2>El modelo de cajas (Box Model)</h2>
+        <p>En CSS, todo elemento es una caja. Cada caja tiene:</p>
+        <ul>
+          <li>Content → El contenido del elemento.</li>
+          <li>Padding → Espacio entre contenido y borde.</li>
+          <li>Border → El borde del elemento.</li>
+          <li>Margin → Espacio entre cajas.</li>
+        </ul>
+        <p>Entender este modelo es clave para diseñar correctamente.</p>
+
+        <h2>Unidades en CSS</h2>
+        <p>Existen distintas formas de medir tamaños en CSS:</p>
+        <ul>
+          <li>Absolutas: px, cm, in.</li>
+          <li>Relativas: %, em, rem, vh, vw.</li>
+        </ul>
+        <p>Las relativas permiten un diseño más flexible y adaptable.</p>
+
+        <h2>Colores en CSS</h2>
+        <p>Puedes definir colores de distintas formas:</p>
+        <ul>
+          <li>Palabras clave: red, blue.</li>
+          <li>Hexadecimal: #ff0000.</li>
+          <li>RGB / RGBA: rgb(255,0,0) / rgba(255,0,0,0.5)</li>
+          <li>HSL: hsl(0, 100%, 50%).</li>
+        </ul>
+
+        <h2>Custom Properties (Variables en CSS)</h2>
+        <p>Las variables CSS facilitan la reutilización de valores:</p>
+        <pre><code>:root {
+    --color-principal: #3498db;
+}
+
+h1 { 
+    color: var(--color-principal);
+}
+        </code></pre>
+
+        <h2>Diseño adaptable (Responsive Design)</h2>
+        <p>
+          El <strong>responsive design</strong> hace que un sitio se vea bien en
+          todos los dispositivos. Se logra con <strong>media queries</strong>,
+          unidades relativas y técnicas como <strong>flexbox y grid</strong>.
+        </p>
+
+        <h2>Flexbox vs Grid en CSS</h2>
+        <ul>
+          <li>Flexbox: Ideal para alinear elementos en fila o columna.</li>
+          <li>
+            Grid: Perfecto para diseños de dos dimensiones (filas y columnas).
+          </li>
+        </ul>
+        <p>Ambos son complementarios y muy poderosos.</p>
+
+        <h2>@container en CSS (Container Queries)</h2>
+        <p>
+          Las <strong>container queries</strong> permiten que los elementos se
+          adapten no solo al tamaño de la pantalla, sino al de su
+          <strong>contenedor padre</strong>. Ejemplo: cambiar el diseño de una
+          tarjeta dependiendo de si aparece en un espacio grande o pequeño.
+        </p>
+        <h2>Conclusión</h2>
+        <p>
+          CSS es la herramienta que transforma simples páginas HTML en
+          <strong>experiencias visuales atractivas</strong>. Dominar sus
+          fundamentos —selectores, modelo de cajas, unidades, colores,
+          responsive, flexbox, grid y container queries— te dará una base sólida
+          para crear diseños modernos y profesionales.
+        </p>
+
+        <div class="tags">
+          <span>#CSS3</span>
+          <span>#ResponsiveDesign</span>
+          <span>#Flexbox </span>
+          <span>#CSSGrid </span>
+          <span>#WebDesign</span>
+        </div>
+      </article>
+    </main>
+    <footer id="footer">
+      <p>© 2025 | Blog de Programación por Angela Jasso.</p>
+      <section>
+        <a href="https://github.com/angelajasso/">
+          <img src="../assets/mdi_github75.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/angelajasso/"
+          ><img src="../assets/mdi_linkedin75.svg" alt="LinkedIn"
+        /></a>
+      </section>
+    </footer>
+  </body>
+</html>
