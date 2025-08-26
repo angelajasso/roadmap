@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style-article.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logotipo" id="home">
+        <img src="../assets/Logo.svg" alt="logo" />
+        <p>Angela Jasso</p>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Roadmap</a>
+          </li>
+          <li>
+            <a href="#article">Artículo</a>
+          </li>
+          <li>
+            <a href="#footer">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="header-article" id="article">
+        <h1>Fundamentos de JavaScript</h1>
+        <p>Publicado el 25 de agosto de 2025 • Por @angelajasso</p>
+      </section>
+      <article>
+        <h2>📌 Introducción a JavaScript</h2>
+        <p>
+          JavaScript es uno de los lenguajes más importantes en el desarrollo
+          web. Junto con <strong>HTML</strong> y <strong>CSS</strong>, forma la
+          base de toda página moderna. En esta primera parte de la serie
+          aprenderás los <em>fundamentos</em> que necesitas dominar para
+          comenzar a programar en JavaScript.
+        </p>
+        <p>
+          JavaScript es un lenguaje de programación que permite agregar
+          interactividad a las páginas web. Con él puedes hacer que un botón
+          muestre un mensaje, validar formularios, crear animaciones o incluso
+          desarrollar aplicaciones completas del lado del cliente y del
+          servidor.
+        </p>
+
+        <h2>📌 Variables en JavaScript</h2>
+        <p>
+          Una variable es un contenedor que guarda información. En JavaScript
+          puedes declararlas con <code>var</code>, <code>let</code> y
+          <code>const</code>.
+        </p>
+        <pre><code>// Ejemplo de variables
+let nombre = "Ángela";
+const PI = 3.1416;
+var edad = 25;
+</code></pre>
+
+        <h2>📌 Tipos de datos</h2>
+        <p>
+          JavaScript trabaja con distintos tipos de datos, entre los más
+          comunes:
+        </p>
+        <ul>
+          <li>
+            <strong>String</strong>: cadenas de texto (<code>"Hola"</code>).
+          </li>
+          <li>
+            <strong>Number</strong>: números enteros o decimales
+            (<code>42</code>, <code>3.14</code>).
+          </li>
+          <li>
+            <strong>Boolean</strong>: verdadero o falso (<code>true</code>,
+            <code>false</code>).
+          </li>
+          <li><strong>Null</strong>: ausencia de valor.</li>
+          <li>
+            <strong>Undefined</strong>: una variable declarada sin valor
+            asignado.
+          </li>
+          <li><strong>Object</strong>: estructuras más complejas de datos.</li>
+        </ul>
+
+        <h2>📌 Type casting</h2>
+        <p>
+          En JavaScript a veces es necesario convertir un tipo de dato en otro,
+          a esto se le llama
+          <em>type casting</em>.
+        </p>
+        <pre><code>// Convertir String a Number
+let numero = Number("123"); // 123
+
+// Convertir Number a String
+let texto = String(456); // "456"
+</code></pre>
+
+        <h2>📌 Estructuras de datos</h2>
+        <p>
+          Además de los tipos primitivos, existen estructuras para agrupar y
+          manipular datos:
+        </p>
+        <ul>
+          <li><strong>Arrays</strong>: listas ordenadas de valores.</li>
+          <li><strong>Objetos</strong>: colecciones de pares clave-valor.</li>
+          <li>
+            <strong>Maps y Sets</strong>: colecciones avanzadas para casos
+            específicos.
+          </li>
+        </ul>
+        <pre><code>// Ejemplo de array
+let frutas = ["manzana", "naranja", "plátano"];
+
+// Ejemplo de objeto
+let persona = {
+  nombre: "Ángela",
+  edad: 25,
+  profesion: "Desarrolladora"
+};
+</code></pre>
+
+        <p>
+          ✅ Con esto hemos cubierto los
+          <strong>fundamentos básicos de JavaScript</strong>. En la próxima
+          entrega veremos cómo controlar el flujo del código con bucles,
+          condicionales y funciones.
+        </p>
+
+        <h2>Conclusión</h2>
+        <p>
+          Aprender JavaScript es esencial si quieres convertirte en
+          desarrollador web, ya que es el puente entre HTML, CSS y las
+          interacciones modernas que esperan los usuarios.
+        </p>
+
+        <div class="tags">
+          <span>#JavaScript</span>
+          <span>#Frontend</span>
+          <span>#WebDevelopment</span>
+        </div>
+      </article>
+    </main>
+    <footer id="footer">
+      <p>© 2025 | Blog de Programación por Angela Jasso.</p>
+      <section>
+        <a href="https://github.com/angelajasso/">
+          <img src="../assets/mdi_github75.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/angelajasso/"
+          ><img src="../assets/mdi_linkedin75.svg" alt="LinkedIn"
+        /></a>
+      </section>
+    </footer>
+  </body>
+</html>
