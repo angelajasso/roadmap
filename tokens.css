@@ -1,4 +1,4 @@
-t {
+:root {
   /* Colores */
   --color-50: #f0f1f4;
   --color-100: #e1e4e9;
@@ -17,6 +17,7 @@ t {
   --color-accent: var(--color-500);
   --color-text: var(--color-900);
   --other-color: var(--color-950);
+  --color-card: var(--color-500);
 
   /* Tipografía */
   --font-family-base: "Open Sans", sans-serif;
