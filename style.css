@@ -61,6 +61,7 @@ nav li {
 
 nav a {
   text-decoration: none;
+  color: var(--color-bg);
 }
 
 nav li:hover,
@@ -133,6 +134,7 @@ h2 {
   /* Habilitar container query */
   container-type: inline-size;
   container-name: main-container;
+  color: var(--color-text);
 }
 
 .roadmap {
@@ -155,6 +157,7 @@ h2 {
 
 .step a {
   text-decoration: none;
+  color: var(--color-text);
 }
 
 .step h2 {
