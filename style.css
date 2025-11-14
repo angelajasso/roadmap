@@ -134,7 +134,7 @@ h2 {
   /* Habilitar container query */
   container-type: inline-size;
   container-name: main-container;
-  color: var(--color-text);
+  color: var(--cream);
 }
 
 .roadmap {
@@ -147,17 +147,17 @@ h2 {
 }
 
 .step {
-  background-color: var(--color-card);
+  background-color: var(--color-secundary);
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--color-accent);
 }
 
 .step a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--cream);
 }
 
 .step h2 {
@@ -179,7 +179,7 @@ ul {
 }
 
 .card-container {
-  background-color: var(--color-card);
+  background-color: var(--color-secundary);
   border-radius: 12px;
   padding: 2rem;
   margin: 0 3rem 3rem 3rem;
