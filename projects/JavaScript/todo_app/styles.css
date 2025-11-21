@@ -1,0 +1,44 @@
+@import url("../../../css/tokens.css");
+
+/* General Styles*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family-base);
+}
+
+header {
+  display: flex;
+  background: var(--gradient);
+  padding: var(--space-sm) var(--space-lg);
+  justify-content: space-between;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.toggle {
+  align-content: center;
+}
+
+.theme-btn {
+  font-size: var(--font-size-lg);
+  border-radius: 50%;
+  padding: 0.3rem;
+  border: 5px var(--text-muted) solid;
+}
