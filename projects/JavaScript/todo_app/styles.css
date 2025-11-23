@@ -42,3 +42,33 @@ header {
   padding: 0.3rem;
   border: 5px var(--text-muted) solid;
 }
+
+main {
+  justify-items: center;
+}
+
+h1 {
+  font-size: var(--font-size-xxlg);
+  margin: var(--space-lg) 0;
+}
+
+#task {
+  padding: var(--space-xs);
+  font-size: var(--font-size-xlg);
+  border-radius: var(--space-sm);
+}
+
+.add {
+  margin: var(--space-xs);
+  padding: var(--space-xs);
+  font-size: var(--font-size-xlg);
+  border-radius: var(--space-sm);
+  background-color: var(--surface);
+  border: 3px solid var(--brand);
+}
+
+.add:hover {
+  background-color: var(--brand-hover);
+  color: var(--text-muted);
+  border: 3px solid var(--brand-hover);
+}
