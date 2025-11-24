@@ -11,6 +11,7 @@
   /*Semantic tokens*/
   --bg: var(--color-primary-50);
   --text: var(--color-primary-950);
+  --text-black: var(--color-primary-950);
   --text-muted: var(--color-primary-50);
   --surface: var(--color-neutral-400);
   --brand-hover: var(--color-primary-600);

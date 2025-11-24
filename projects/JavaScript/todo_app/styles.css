@@ -44,7 +44,9 @@ header {
 }
 
 main {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -52,9 +54,14 @@ h1 {
   margin: var(--space-lg) 0;
 }
 
+form {
+  text-align: center;
+  margin: var(--space-lg);
+}
+
 #task {
   padding: var(--space-xs);
-  font-size: var(--font-size-xlg);
+  font-size: var(--font-size-lg);
   border-radius: var(--space-sm);
 }
 
@@ -71,4 +78,23 @@ h1 {
   background-color: var(--brand-hover);
   color: var(--text-muted);
   border: 3px solid var(--brand-hover);
+}
+
+.list-taks {
+  margin: var(--space-lg);
+  font-size: var(--font-size-lg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: 3px solid var(--brand);
+  border-radius: var(--space-sm);
+  margin: var(--space-xs);
+  padding: var(--space-xs);
+  background-color: var(--surface);
+  color: var(--text-black);
+  width: 80vw;
 }
