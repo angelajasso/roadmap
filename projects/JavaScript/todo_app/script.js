@@ -1,5 +1,7 @@
 const themeBtn = document.querySelector("#theme-btn");
 const themeSaved = localStorage.getItem("theme");
+const input = document.querySelector("input");
+const form = document.querySelector("form");
 
 if (themeSaved === "dark") {
   document.body.classList.add("dark");
@@ -18,4 +20,13 @@ themeBtn.addEventListener("click", function () {
     themeBtn.textContent = "🌙";
     localStorage.setItem("theme", "light");
   }
+});
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Para que no se recargue la página
+
+  const text = input.value;
+  const li = document.createElement("li");
+  li.textContent = text;
+  document.querySelector("ul").appendChild(li);
 });
