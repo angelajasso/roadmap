@@ -41,6 +41,7 @@ header {
   border-radius: 50%;
   padding: 0.3rem;
   border: 5px var(--text-muted) solid;
+  cursor: pointer;
 }
 
 main {
@@ -68,10 +69,11 @@ form {
 .add {
   margin: var(--space-xs);
   padding: var(--space-xs);
-  font-size: var(--font-size-xlg);
+  font-size: var(--font-size-lg);
   border-radius: var(--space-sm);
   background-color: var(--surface);
   border: 3px solid var(--brand);
+  cursor: pointer;
 }
 
 .add:hover {
@@ -97,4 +99,38 @@ li {
   background-color: var(--surface);
   color: var(--text-black);
   width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li input {
+  margin: 0 var(--space-xs);
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+li button {
+  padding: var(--space-xs);
+  font-size: var(--font-size-base);
+  border-radius: var(--space-sm);
+  background-color: var(--surface);
+  border: 3px solid var(--brand);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: var(--brand-hover);
+  color: var(--text-muted);
+  border: 3px solid var(--brand-hover);
+}
+
+.completada {
+  text-decoration: line-through;
+  color: var(--brand-hover);
 }

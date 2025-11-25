@@ -23,17 +23,18 @@
       </section>
     </header>
     <main>
-      <h1>Mis tareas</h1>
-      <form class="new-task">
+      <h1>Lista de tareas</h1>
+      <form class="new-task" id="form">
         <input
           type="text"
           id="task"
           name="task"
-          placeholder="Add a new task"
-        /><button class="add" id="add">Agregar</button>
+          placeholder="Escribe una tarea"
+          autocomplete="off"
+        /><button class="add" id="add" type="submit">✚ Agregar</button>
       </form>
       <section class="list-taks">
-        <ul></ul>
+        <ul id="list"></ul>
       </section>
     </main>
     <footer></footer>
