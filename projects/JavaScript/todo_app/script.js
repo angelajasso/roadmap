@@ -1,11 +1,17 @@
-const themeBtn = document.querySelector("#theme-btn");
-const themeSaved = localStorage.getItem("theme");
-const form = document.querySelector("#form");
-const input = document.querySelector("#task");
-const list = document.querySelector("#list");
+// =========================
+//  SELECTORES
+// =========================
 
-//Array donde guardamos las tareas
-let tareas = [];
+const themeBtn = document.querySelector("#theme-btn");
+const form = document.querySelector("#form");
+const list = document.querySelector("#list");
+const input = document.querySelector("#input");
+
+// =========================
+//  TEMA OSCURO
+// =========================
+
+const themeSaved = localStorage.getItem("theme");
 
 if (themeSaved === "dark") {
   document.body.classList.add("dark");
@@ -14,7 +20,7 @@ if (themeSaved === "dark") {
   themeBtn.textContent = "🌙";
 }
 
-themeBtn.addEventListener("click", function () {
+themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
   if (document.body.classList.contains("dark")) {
@@ -26,112 +32,122 @@ themeBtn.addEventListener("click", function () {
   }
 });
 
-// 1) Cargar tareas desde localStorage al iniciar
-document.addEventListener("DOMContentLoaded", () => {
-  const guardadas = JSON.parse(localStorage.getItem("tareas")) || [];
-  tareas = guardadas;
+// =========================
+//   TAREAS (OBJETOS)
+// =========================
 
+let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+
+// =========================
+//  CARGAR TAREAS AL INICIAR
+// =========================
+
+document.addEventListener("DOMContentLoaded", () => {
   tareas.forEach((t) => agregarTareaDOM(t));
 });
 
-// 2) Evento del formulario
+// =========================
+//    AGREGAR NUEVA TAREA
+// =========================
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const texto = input.value.trim();
   if (texto === "") return;
 
-  tareas.push(texto);
+  // Crear un objeto tarea
+  const nuevaTarea = {
+    texto,
+    completada: false,
+  };
+
+  tareas.push(nuevaTarea);
   guardarEnLocalStorage();
 
-  agregarTareaDOM(texto);
+  agregarTareaDOM(nuevaTarea);
   input.value = "";
 });
 
-// 3) Función para agregar tarea al DOM
-function agregarTareaDOM(texto) {
+// =========================
+//     AGREGAR AL DOM
+// =========================
+
+function agregarTareaDOM(tarea) {
   const li = document.createElement("li");
 
-  //contenedor para checkbox y span
+  // Contenedor checkbox + texto
   const contenedorCSpan = document.createElement("div");
   contenedorCSpan.classList.add("checkSpan");
 
-  //Checkbox
+  // Checkbox
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.checked = tarea.completada;
 
-  //span
+  // Texto
   const span = document.createElement("span");
-  span.textContent = texto;
+  span.textContent = tarea.texto;
 
-  // Contenedor para los botones
+  if (tarea.completada) {
+    span.classList.add("completada");
+  }
+
+  // === Checkbox listener ===
+  checkbox.addEventListener("change", () => {
+    tarea.completada = checkbox.checked;
+    guardarEnLocalStorage();
+
+    if (tarea.completada) {
+      span.classList.add("completada");
+    } else {
+      span.classList.remove("completada");
+    }
+  });
+
+  contenedorCSpan.append(checkbox, span);
+
+  // =========================
+  //    BOTONES (Editar/Eliminar)
+  // =========================
+
   const contenedorBtns = document.createElement("div");
   contenedorBtns.classList.add("acciones");
 
-  //Botón editar
   const btnEditar = document.createElement("button");
   btnEditar.textContent = "✏️";
-  btnEditar.classList.add("editar");
 
-  //Botón eliminar
-  const btn = document.createElement("button");
-  btn.textContent = "✖";
-  btn.classList.add("Eliminar");
-
-  //listener checkbox
-  checkbox.addEventListener("change", () => {
-    if (checkbox.checked) {
-      span.classList.add("completada");
-    } else {
-      span.classList.remove("conpletada");
-    }
-  });
-
-  // Editar tarea
   btnEditar.addEventListener("click", () => {
-    const nuevoTexto = prompt("Edita la tarea:", span.textContent);
+    const nuevoTexto = prompt("Edita la tarea:", tarea.texto);
     if (nuevoTexto && nuevoTexto.trim() !== "") {
-      actualizarTarea(span.textContent, nuevoTexto.trim());
-      span.textContent = nuevoTexto.trim();
+      tarea.texto = nuevoTexto.trim();
+      span.textContent = tarea.texto;
+      guardarEnLocalStorage();
     }
   });
 
-  //Eliminar tarea
-  btn.addEventListener("click", () => {
-    eliminarTarea(span.textContent);
+  const btnEliminar = document.createElement("button");
+  btnEliminar.textContent = "✖";
+
+  btnEliminar.addEventListener("click", () => {
+    tareas = tareas.filter((t) => t !== tarea);
+    guardarEnLocalStorage();
     li.remove();
   });
 
-  // Agregamos el checkbox y el span al div
-  contenedorCSpan.append(checkbox, span);
+  contenedorBtns.append(btnEditar, btnEliminar);
 
-  // Agregamos los botones al div
-  contenedorBtns.append(btnEditar, btn);
-
-  // Agregamos el texto y el div al <li>
+  // Unir todo al <li>
   li.append(contenedorCSpan, contenedorBtns);
 
+  // Agregar a la lista
   list.appendChild(li);
 }
 
-function actualizarTarea(textoViejo, textoNuevo) {
-  let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
-  let index = tareas.indexOf(textoViejo);
+// =========================
+//   GUARDAR LOCALSTORAGE
+// =========================
 
-  if (index !== -1) {
-    tareas[index] = textoNuevo;
-  }
-
-  localStorage.setItem("tareas", JSON.stringify(tareas));
-}
-
-// 4) Eliminar tarea del array y guardar
-function eliminarTarea(texto) {
-  tareas = tareas.filter((t) => t !== texto);
-  guardarEnLocalStorage();
-}
-
-// 5) Guardar en localStorage
 function guardarEnLocalStorage() {
   localStorage.setItem("tareas", JSON.stringify(tareas));
 }

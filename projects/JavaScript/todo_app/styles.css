@@ -60,7 +60,7 @@ form {
   margin: var(--space-lg);
 }
 
-#task {
+#input {
   padding: var(--space-xs);
   font-size: var(--font-size-lg);
   border-radius: var(--space-sm);
