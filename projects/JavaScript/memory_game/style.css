@@ -1,0 +1,11 @@
+@import url(./../../../css/tokens.css);
+/*General styles*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
