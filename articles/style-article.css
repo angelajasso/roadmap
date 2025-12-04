@@ -1,3 +1,4 @@
+@import url("./../css/tokens.css");
 /* General styles */
 *,
 *::after,
@@ -8,25 +9,16 @@
   scroll-behavior: smooth;
 }
 
-* {
-  --primary-color: hsl(233, 37%, var(--l));
-  --color-text: hsl(233, 37%, var(--t));
-
-  background-color: var(--primary-color);
-  color: var(--color-text);
-}
-
 body {
-  --l: 95%;
-  --t: 17%;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family-base);
 }
 
 /* header */
 header {
-  --l: 25%;
-  --t: 95%;
+  background: var(--gradient);
+  color: var(--text-muted);
   justify-content: space-between;
   display: grid;
   align-items: center;
@@ -50,7 +42,7 @@ nav {
   display: flex;
   border-radius: 1rem;
   padding: 0 0.8rem;
-  --l: 50%;
+  background-color: var(--brand);
 }
 
 nav ul {
@@ -68,11 +60,12 @@ nav li {
 
 nav a {
   text-decoration: none;
+  color: var(--text-muted);
 }
 
 nav li:hover,
 nav li:active {
-  --l: 17%;
+  background-color: var(--brand-hover);
 }
 
 /* main */
@@ -80,8 +73,8 @@ main {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 4rem;
-  --l: 75%;
-  --t: 17%;
+  background-color: var(--brand-hover);
+  color: var(--text-muted);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -108,8 +101,6 @@ article p {
 }
 
 article pre {
-  --l: 17%;
-  --t: 95%;
   padding: 1rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -139,7 +130,8 @@ article a:hover {
 }
 
 .tags span {
-  --l: 85%;
+  background-color: var(--surface);
+  color: var(--text);
   padding: 0.3rem 0.8rem;
   margin-right: 0.5rem;
   border-radius: 20px;
@@ -148,11 +140,28 @@ article a:hover {
 
 /* footer */
 footer {
-  --l: 25%;
-  --t: 95%;
   text-align: center;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.aside_social {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  justify-self: center;
+}
+
+.btn {
+  margin: 0 1rem;
+  background-color: var(--surface);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--brand);
 }
